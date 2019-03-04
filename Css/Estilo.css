@@ -1,0 +1,125 @@
+body {
+    background: rgb(94, 0, 0);
+    margin: 0%;
+    color: white;
+    font-family: 'ZCOOL QingKe HuangYou', cursive;
+}
+.header::after {
+    content:" ";
+    height: 100vh;
+    width: 100%;
+    background-image: url(../img/Darius\ rey\ eternop.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: block;
+    filter: blur(10px);
+    -webkit-filter: blur(10px);
+    transition: all 1000ms;
+}
+.header:hover .header-content {
+    filter: blur(2px);
+    -webkit-filter: blur(2px);
+}
+.header:hover::after {
+    filter: blur(0px);
+    -webkit-filter: blur(0px)
+}
+
+.header-content {
+    position: absolute;
+    z-index: 1;
+    top: 16%;
+    left: 50%;
+    margin-top: 130px;
+    margin-left: -147px;
+    text-align: center;
+    width: 300px;
+    height: 350px;
+    transition: all 1000ms;
+}
+
+.title {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 40px;
+    margin: 10px;
+}
+
+.text {
+    line-height: 1.7;
+    margin-top: 10px;
+}
+.container {
+    max-width: 960px;
+    margin: auto;
+    overflow: hidden;
+    padding: 4rem 1 rem
+}
+
+.grid-3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+}
+
+
+.grid-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+    padding: 100px;
+}
+.grid-2 h3 {
+    text-align: center;
+}
+
+.text-center {
+    text-align: center;
+    margin:auto
+}
+.fondo-1 {
+    background: black
+}
+.footer {
+    text-align: center;
+    padding: 1.2rem;
+}
+.footer {
+    margin: 0;
+}
+.services {
+    padding: 2rem 0;
+    text-align: center;
+
+}
+@media(max-width: 560px) {
+    .header::after {
+        height: 60vh;
+    
+    }
+    .header-content {
+        top: 8%;
+        margin-top: 65px
+    }
+    .header-content .logo {
+        height: 140px;
+        width: 90px;
+    }
+    .header-content .text {
+        display: none
+    }
+    .grid-3, .grid-2 {
+        grid-template-columns: 1fr;
+    }
+    .services {
+        padding: 1.4rem 1rem;
+    }
+}
+@media (max-height: 509px) {
+    .header-content .text {
+        display: none
+    }
+    .header-content {
+        top: 0
+    }
+}
